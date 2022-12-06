@@ -13,17 +13,28 @@ console.log('JS OK')
 
 
 //1) prendo gli elementi dalla pagina
-const Km = document.getElementById('Km');
+const km = document.getElementById('km');
 const age = document.getElementById('age');
 const button = document.getElementById("button");
 console.log('Km,button,age');
 
 
-button.addEventListener('click', function (){
+button.addEventListener('click', function () {
     
-    const kmValue = Km.value;
+    const kmValue = (km.value * 0.21);
     const ageValue = age.value;
     console.log(kmValue,ageValue);
+
+    if (ageValue < 18) {
+        const minorAge= (kmValue * 0.8).toFixed(2);
+        console.log("il prezzo e' di " + minorAge + "€");
+     }
+     
+     
+     else if (ageValue > 65) {
+         const overAge= (kmValue * 0.6).toFixed(2);
+         console.log("il prezzo e' di " + overAge + "€");
+     }
     
 });
 
