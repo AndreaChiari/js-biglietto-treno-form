@@ -27,12 +27,16 @@ button.addEventListener('click', function () {
 
     if (ageValue < 18) {
         const minorAge= (kmValue * 0.8).toFixed(2);
+        const targetElement = document.getElementById('finalResult');
+        targetElement.innerText = ("il prezzo e' di " + minorAge + "€");
         console.log("il prezzo e' di " + minorAge + "€");
      }
      
      
      else if (ageValue > 65) {
          const overAge= (kmValue * 0.6).toFixed(2);
+         const targetElement = document.getElementById('finalResult');
+         targetElement.innerText = ("il prezzo e' di " + overAge + "€");
          console.log("il prezzo e' di " + overAge + "€");
      }
     
